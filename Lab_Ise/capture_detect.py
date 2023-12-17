@@ -16,7 +16,6 @@ def loop():
 	while True:
 		if GPIO.input(PIR_OUT_PIN) == GPIO.LOW:
 			print ('...Movement not detected!')
-            print("0")
             time.sleep( 1 )
 		else:
 			print ('Movement detected!...')
