@@ -17,7 +17,8 @@ def loop():
 		if GPIO.input(PIR_OUT_PIN) == GPIO.LOW:
 			print ('...Movement not detected!')
             time.sleep( 1 )
-		else:
+                    
+        else:
 			print ('Movement detected!...')
 
             dt_now = datetime.datetime.now()
