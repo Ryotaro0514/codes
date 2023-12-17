@@ -2,9 +2,6 @@
 
 import RPi.GPIO as GPIO
 import time
-import cv2
-import datetime
-import numpy as np
 
 PIR_OUT_PIN = 11    # pin11
 
@@ -16,11 +13,13 @@ def loop():
 	while True:
 		if GPIO.input(PIR_OUT_PIN) == GPIO.LOW:
 			print ('...Movement not detected!')
+            print("0")
             time.sleep( 1 )
-                    
-        else:
+		else:
 			print ('Movement detected!...')
 
+            print("1")
+        
             dt_now = datetime.datetime.now()
             file_name = dt_now.strftime('%Y年%m月%d日%H時%M分%S秒')
             print(file_name)
@@ -44,7 +43,7 @@ def loop():
             writer.release()
             cap.release()
         
-        time.sleep( 10 )
+            time.sleep( 10 )
 
 def destroy():
 	GPIO.cleanup()                     # Release resource
