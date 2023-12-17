@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
 import RPi.GPIO as GPIO
+import cv2
 import time
+import datetime
+import numpy as np
 
 PIR_OUT_PIN = 11    # pin11
 
@@ -12,9 +15,11 @@ def setup():
 def loop():
 	while True:
 		if GPIO.input(PIR_OUT_PIN) == GPIO.LOW:
-			print ('...Movement not detected!')
+			print('...Movement not detected!')
+            print("0")
+            time.sleep( 1 )
 		else:
-			print ('Movement detected!...')
+			print('Movement detected!...')
             print("1")
         
             dt_now = datetime.datetime.now()
