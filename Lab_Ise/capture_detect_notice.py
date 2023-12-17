@@ -2,6 +2,7 @@ import RPi.GPIO as GPIO
 import cv2
 import time
 import datetime
+import requests
 import numpy as np
 
 #LINEメッセージ送信の関数
