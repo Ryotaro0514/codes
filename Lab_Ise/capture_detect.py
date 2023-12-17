@@ -13,16 +13,16 @@ def loop():
 	while True:
 		if GPIO.input(PIR_OUT_PIN) == GPIO.LOW:
 			print ('...Movement not detected!')
-            print("0")
-            time.sleep( 1 )
+            print ("0")
+            time.sleep ( 1 )
 		else:
 			print ('Movement detected!...')
 
-            print("1")
+            print ("1")
         
             dt_now = datetime.datetime.now()
             file_name = dt_now.strftime('%Y年%m月%d日%H時%M分%S秒')
-            print(file_name)
+            print (file_name)
         
             #カメラ映像を保存する
             cap = cv2.VideoCapture(0)
