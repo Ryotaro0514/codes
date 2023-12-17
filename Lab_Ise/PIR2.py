@@ -12,9 +12,9 @@ def setup():
 def loop():
 	while True:
 		if GPIO.input(PIR_OUT_PIN) == GPIO.LOW:
-			print '...Movement not detected!'
+			print ('...Movement not detected!')
 		else:
-			print 'Movement detected!...'
+			print ('Movement detected!...')
 
 def destroy():
 	GPIO.cleanup()                     # Release resource
