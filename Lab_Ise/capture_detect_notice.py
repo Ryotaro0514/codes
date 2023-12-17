@@ -21,7 +21,7 @@ GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
 GPIO.setup(PIR_OUT_PIN, GPIO.IN)    # Set BtnPin's mode is input
 
 while True:
-    if(GPIO.input(GPIO_PIN) == GPIO.HIGH):
+    if(GPIO.input(PIR_OUT_PIN) == GPIO.HIGH):
         #センサー検出時の処理
         print("1")
         
