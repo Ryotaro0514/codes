@@ -41,7 +41,7 @@ while True:
         
         #検出時間の取得
         dt_now = datetime.datetime.now()
-        Discovery_time = dt_now.strftime('%Y年%m月%d日%H時%M分%S秒')
+        Discovery_time = dt_now.strftime('%Y/%m/%d/%H/%M/%S')
         print(Discovery_time)
 
         print("Publishing message: %s to topic: %s" % (Discovery_time, Topic))
