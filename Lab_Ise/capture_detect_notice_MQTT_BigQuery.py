@@ -35,7 +35,7 @@ def to_gbq():
    client = bigquery.Client()
    table_id = 'supple-outlet-404309.SensorDataset.PIRSensor' #プロジェクトID.データセットID.テーブルID
    dt_now = datetime.datetime.now()
-   rows_to_insert = ['time': dt_now.strftime('%Y-%m-%d %H:%M:%S'),]
+   rows_to_insert = [{'time': dt_now.strftime('%Y-%m-%d %H:%M:%S')}]
    errors = client.insert_rows_json(table_id, rows_to_insert)
    if errors == []:
        print("New rows have been added.")
