@@ -62,6 +62,8 @@ while True:
 
         print("Publishing message: %s to topic: %s" % (Discovery_time, Topic))
         client.publish(Topic,Discovery_time)
+
+        #BigQueryにデータ送信
         to_gbq()
         
         #カメラ画像を保存する
