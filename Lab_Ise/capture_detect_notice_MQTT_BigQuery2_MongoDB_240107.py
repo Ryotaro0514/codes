@@ -35,7 +35,7 @@ def send_message(Discovery_time):
 #BigQueryにデータ送信
 def to_gbq(Discovery_time):
    client = bigquery.Client()
-   table_id = 'supple-outlet-404309.SensorDataset2.PIRSensor2' #プロジェクトID.データセットID.テーブルID
+   table_id = 'supple-outlet-404309.SensorDataset2.PIRSensor_test' #プロジェクトID.データセットID.テーブルID
 
    rows_to_insert = [{'time': Discovery_time}]
    errors = client.insert_rows_json(table_id, rows_to_insert)
