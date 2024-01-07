@@ -33,11 +33,10 @@ def send_message(Discovery_time):
 
 
 #BigQueryにデータ送信
-def to_gbq():
+def to_gbq(Discovery_time):
    client = bigquery.Client()
    table_id = 'supple-outlet-404309.SensorDataset2.PIRSensor2' #プロジェクトID.データセットID.テーブルID
-   dt_now = datetime.datetime.now()
-   rows_to_insert = [{'time': dt_now.strftime('%Y-%m-%d %H:%M:%S')}]
+   rows_to_insert = [{'time': Discovery_time}]
    errors = client.insert_rows_json(table_id, rows_to_insert)
    if errors == []:
        print("New rows have been added.")
@@ -86,7 +85,7 @@ while True:
         print("Message received:" + Discovery_time)
 
         #BigQueryにデータ送信
-        to_gbq()
+        to_gbq(Discovery_time)
         
         #カメラ画像を保存する
         cap = cv2.VideoCapture(0)
