@@ -55,7 +55,7 @@ while True:
         mycol = mydb["date_test1"]
 
         #Insert a document
-        mydoc = {"Date":msg}
+        mydoc = {"Date":Discovery_time}
 
         x = mycol.insert_one(mydoc)
         print (x)
@@ -67,7 +67,7 @@ while True:
         #for y in result:
         #   print (y)
 
-        print("Message received:" + msg)
+        print("Message received:" + Discovery_time)
         
         #カメラ画像を保存する
         cap = cv2.VideoCapture(0)
