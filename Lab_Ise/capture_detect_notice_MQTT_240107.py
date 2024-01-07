@@ -15,7 +15,7 @@ print("creating new instance")
 client = mqtt.Client("pub2") #create new instance
 
 print("connecting to broker: %s" % broker_address)
-client.connect(broker_address,keepalive=65535) #connect to broker
+client.connect(broker_address,keepalive=3600) #connect to broker
 
 
 #LINEメッセージ送信の関数
