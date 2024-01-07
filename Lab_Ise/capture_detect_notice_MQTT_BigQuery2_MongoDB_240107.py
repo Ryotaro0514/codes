@@ -36,6 +36,7 @@ def send_message(Discovery_time):
 def to_gbq(Discovery_time):
    client = bigquery.Client()
    table_id = 'supple-outlet-404309.SensorDataset2.PIRSensor2' #プロジェクトID.データセットID.テーブルID
+
    rows_to_insert = [{'time': Discovery_time}]
    errors = client.insert_rows_json(table_id, rows_to_insert)
    if errors == []:
@@ -58,7 +59,7 @@ while True:
         
         #検出時間の取得
         dt_now = datetime.datetime.now()
-        Discovery_time = dt_now.strftime('%Y/%m/%d/%H/%M/%S')
+        Discovery_time = dt_now.strftime('%Y-%m-%d %H:%M:%S')
         print(Discovery_time)
 
         print("Publishing message: %s to topic: %s" % (Discovery_time, Topic))
