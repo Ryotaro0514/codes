@@ -7,7 +7,7 @@ import numpy as np
 import paho.mqtt.client as mqtt
 
 ###### Edit variables to your environment #######
-broker_address = "test.mosquitto.org"     #MQTT broker_address
+broker_address = "mqtt.eclipseprojects.io"     #MQTT broker_address
 Topic = "piper-jp_ise"
 
 # publish MQTT
