@@ -84,7 +84,7 @@ while True:
         send_message(Discovery_time)
         
         #10秒待機
-        time.sleep( 120 )
+        time.sleep( 90 )
         
     else:
         #センサー未検出時の処理
