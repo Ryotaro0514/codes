@@ -5,6 +5,7 @@ import datetime
 import requests
 import numpy as np
 import paho.mqtt.client as mqtt
+import os
 import pymongo
 
 ###### Edit variables to your environment #######
