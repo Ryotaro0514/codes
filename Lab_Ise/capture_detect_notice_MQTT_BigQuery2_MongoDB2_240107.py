@@ -73,10 +73,10 @@ while True:
 
         #BigQueryにデータ送信
         to_gbq(Discovery_time)
-        
 
-        #3秒待機
-        time.sleep( 3 )
+
+        #5秒待機
+        time.sleep( 5 )
         
         #カメラ画像を保存する
         cap = cv2.VideoCapture(0)
