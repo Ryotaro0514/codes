@@ -80,10 +80,13 @@ while True:
         cv2.imwrite("image.jpg", frame)
         cap.release()
         
+        #2秒待機
+        time.sleep( 2 )
+
         #LINEメッセージ送信
         send_message(Discovery_time)
         
-        #10秒待機
+        #90秒待機
         time.sleep( 90 )
         
     else:
